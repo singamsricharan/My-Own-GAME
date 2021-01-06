@@ -15,9 +15,11 @@ class Loginform {
         this.loginbutton.hide();
     }
     display(){
+        this.police.hide();
+        this.theif.hide();
         this.logout.hide();
-        this.input.position(windowWidth/2 - 40 ,windowHeight/2 - 80);
-        this.loginbutton.position(windowWidth/2 + 30,windowHeight/2);
+        this.input.position(displayWidth/2 - 40 ,displayHeight/2 - 80);
+        this.loginbutton.position(displayWidth/2 + 30,displayHeight/2);
         this.loginbutton.mousePressed(()=>{
             this.input.hide();
             this.loginbutton.hide();
@@ -26,11 +28,11 @@ class Loginform {
             player.updateCount(playerCount);
             this.greeting.html("Hello " + player.name)
             this.greeting.position(displayWidth/4-10,displayHeight/4);
-            image(policeimage,windowWidth/2-100,windowHeight/2+100)
-            image();
             
+            image(policeimage,displayWidth/2-30,displayHeight/2+50,20,20)
+            image(theifimage,displayWidth/2+20,displayHeight/2+10,20,20)
         })
-        this.logout.position(windowWidth-80,windowHeight-50)
+        this.logout.position(displayWidth-80,displayHeight-50)
         this.logout.mousePressed(()=>{
             
         })

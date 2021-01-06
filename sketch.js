@@ -21,7 +21,7 @@ function preload(){
   house8=loadImage("images/house8.jpg");
 }
 function setup() {
-  canvas=createCanvas(windowWidth,windowHeight);
+  canvas=createCanvas(displayWidth,displayHeight);
   database = firebase.database(); 
   Game=new game();
   Game.getState();
