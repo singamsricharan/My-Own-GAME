@@ -1,8 +1,11 @@
-var canvas,firebase ;
+var canvas,firebase;
 var gameState = 0;
 var playerCount;
 var allPlayers;
 var Game,form,player;
+function preload(){
+  
+}
 function setup() {
   canvas=createCanvas(windowWidth,windowHeight);
   database = firebase.database(); 

@@ -14,6 +14,7 @@ class Form {
     }
     display(){
         background("blue");
+        image()
         this.input.position(windowWidth/2 - 40 ,windowHeight/2 - 80);
         this.loginbutton.position(windowWidth/2 + 30,windowHeight/2);
         this.loginbutton.mousePressed(()=>{
