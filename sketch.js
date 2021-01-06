@@ -2,9 +2,10 @@ var canvas,firebase;
 var gameState = 0;
 var playerCount;
 var allPlayers;
-var Game,form,player;
+var Game,form;
+var player;
 function preload(){
-  
+  policeimage=loadImage("images/policeman.jpg")
 }
 function setup() {
   canvas=createCanvas(windowWidth,windowHeight);
@@ -15,6 +16,6 @@ function setup() {
 }
 
 function draw() {
-  background("lavender");  
+  background("lavender");
   drawSprites();
 }

@@ -1,4 +1,4 @@
-class Form {
+class Loginform {
     constructor(){
         this.input = createInput("Name");
         this.loginbutton = createButton('login');
@@ -13,8 +13,7 @@ class Form {
         this.loginbutton.hide();
     }
     display(){
-        background("blue");
-        image()
+        image(policeimage,windowWidth/2-100,windowHeight/2+100)
         this.input.position(windowWidth/2 - 40 ,windowHeight/2 - 80);
         this.loginbutton.position(windowWidth/2 + 30,windowHeight/2);
         this.loginbutton.mousePressed(()=>{
@@ -22,6 +21,7 @@ class Form {
             this.loginbutton.hide();
             Player.name=this.input.value();
         })
+        this.logout.position(windowWidth-80,windowHeight-50)
         this.logout.mousePressed()
     }
 }

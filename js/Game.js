@@ -21,7 +21,7 @@ async start(){
         playerCount = playerCountRef.val();
         player.getCount();
       }
-      form = new Form()
+      form =new Loginform()
       form.display();
     }
     
