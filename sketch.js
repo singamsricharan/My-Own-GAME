@@ -3,7 +3,7 @@ var gameState = 0;
 var playerCount;
 var allPlayers;
 var Game,form;
-var player;
+var player,logout;
 function preload(){
   policeimage=loadImage("images/policeman.jpg");
   theifimage=loadImage("images/robber.png");

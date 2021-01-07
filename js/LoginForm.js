@@ -34,7 +34,8 @@ class Loginform {
         })
         this.logout.position(displayWidth-80,displayHeight-50)
         this.logout.mousePressed(()=>{
-            
+            logout=new  Logout();
+            loguout.display();
         })
     }
 }

@@ -3,7 +3,7 @@ class theifinstructons{
 
     }
     display(){
-
+        text();
     }
 }
 class policeinstructions{
@@ -11,6 +11,6 @@ class policeinstructions{
 
     }
     display(){
-        
+        text();
     }
 }
