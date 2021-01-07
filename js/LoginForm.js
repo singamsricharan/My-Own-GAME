@@ -28,7 +28,7 @@ class Loginform {
             player.updateCount(playerCount);
             this.greeting.html("Hello " + player.name)
             this.greeting.position(displayWidth/4-10,displayHeight/4);
-            
+            text("whicjh charector do you want to choose");
             image(policeimage,displayWidth/2-30,displayHeight/2+50,20,20)
             image(theifimage,displayWidth/2+20,displayHeight/2+10,20,20)
         })
