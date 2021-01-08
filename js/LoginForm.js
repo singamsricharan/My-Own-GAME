@@ -27,10 +27,8 @@ class Loginform {
             player.update();
             player.updateCount(playerCount);
             this.greeting.html("Hello " + player.name)
-            this.greeting.position(windowWidth/2-50,windowHeight/2);
-            text("which character do you want to choose ?",windowWidth/2-50,windowHeight/2-50);
-            image(policeimage,windowWidth/2-30,windowHeight/2+50,windowWidth/2-50,windowHeight/2-50);
-            image(theifimage,windowWidth/2+20,windowHeight/2+10,windowWidth/2-50,windowHeight/2-50);
+            this.greeting.position(windowWidth/2-70,windowHeight/2);
+            afterlogin();
         })
         this.logout.position(windowWidth-80,windowHeight-50)
         this.logout.mousePressed(()=>{
@@ -38,4 +36,9 @@ class Loginform {
             loguout.display();
         })
     }
+}
+function afterlogin(){
+    text("which character do you want to choose ?",windowWidth/2-50,windowHeight/2-50);
+    image(policeimage,windowWidth/2-30,windowHeight/2+50,windowWidth/2-50,windowHeight/2-50);
+    image(theifimage,windowWidth/2+20,windowHeight/2+10,windowWidth/2-50,windowHeight/2-50);
 }
