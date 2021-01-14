@@ -1,7 +1,6 @@
 class Loginform {
     constructor(){
         this.input = createInput("Name");
-        this.logout=createButton('LOGOUT'); 
         this.theif=createButton('THEIF')
         this.police=createButton('POLICE')
         this.policeimage=loadImage("images/policeman.jpg");
@@ -14,7 +13,6 @@ class Loginform {
         this.police.hide();
     }
     display(){
-        this.logout.hide();
         this.input.position(windowWidth/2-40,windowHeight/2-80);
         text("which character do you want to choose ?",windowWidth/2-50,windowHeight/2-50);
         image(this.policeimage,windowWidth/2-30,windowHeight/2+50,windowWidth/2-50,windowHeight/2-50);
@@ -25,8 +23,6 @@ class Loginform {
             this.input.hide();
             this.theif.hide();
             this.police.hide();
-            this.logout.position(windowWidth-80,windowHeight-50)
-            this.logout.show();
             player.name=this.input.value();
             player.type="police"
             player.update();
@@ -42,10 +38,6 @@ class Loginform {
             player.type="theif"
             player.update();
             player.updateCount(playerCount);
-        })
-        this.logout.mousePressed(()=>{
-            logout=new  Logout();
-            loguout.display();
         })
     }
 }
