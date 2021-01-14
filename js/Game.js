@@ -24,6 +24,8 @@ async start(){
       form =new Loginform()
       form.display();
     }
-    
+    if(gameState===1){
+
+    }
 }
 }

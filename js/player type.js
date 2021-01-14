@@ -1,8 +1,0 @@
-class playertype {
-    constructor(){
-    
-    }
-    display(){
-        
-    }
-}

@@ -4,9 +4,10 @@ var playerCount;
 var allPlayers;
 var Game,form;
 var player,logout,policeimage,theifimage;
-var policestation,coinimage,cashimage,rarecash,house2,house3,house5,house7,house8;
+var policestation,aftercought;
 function preload(){
   policestation=loadImage("images/policestation.png");
+  aftercought=loadImage("images/policestation.png");
 }
 function setup() {
   canvas=createCanvas(windowWidth-15,windowHeight-15);
