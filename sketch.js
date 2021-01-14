@@ -3,7 +3,7 @@ var gameState = 0;
 var playerCount;
 var allPlayers;
 var Game,form;
-var theif,police;
+var theif,police,player;
 var policestation,aftercought;
 function preload(){
   policestation=loadImage("images/policestation.png");

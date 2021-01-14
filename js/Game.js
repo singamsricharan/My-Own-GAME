@@ -21,6 +21,9 @@ async start(){
         playerCount = playerCountRef.val();
         player.getCount();
       }
+      if(player.type==="police"){
+        police=new policeinstructions
+      }
       form =new Loginform()
       form.display();
     }
