@@ -18,5 +18,15 @@ function setup() {
 
 function draw() {
   background("lightblue");
+  if (gameState===1){
+    clear();
+    policeinstruction=new policeinstructions();
+    policeinstruction.display();
+  }
+  if(gameState===2){
+    clear();
+    theifinstructon=new theifinstructons();
+    theifinstructon.display();
+  }
   drawSprites();
 }

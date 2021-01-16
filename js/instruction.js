@@ -6,7 +6,7 @@ class theifinstructons{
     display(){
         this.greeting.html("Hello " + robber.name)
         this.greeting.position(windowWidth/2,windowHeight/7);
-        textsize(windowHeight/6)
+        textSize(windowHeight/6)
         text(" 1. Move anywhere using: arrow keys or  w, a, s, d.",windowWidth/2,windowHeight/6)
         text(" 2. Can hide in house and exit using “e” key - Can’t go out of the room if the door is placed.",windowWidth/2,windowHeight/6)
         text(" 3. Can change as police.",windowWidth/2,windowHeight/6)

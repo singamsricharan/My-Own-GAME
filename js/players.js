@@ -34,7 +34,7 @@ class theif{
     })
     }
     update(){
-        var playerIndex = "theif/player" + this.index;
+        var playerIndex = "theif" + this.index;
         database.ref(playerIndex).set({
         name:this.name,
         score:this.score,
@@ -63,7 +63,7 @@ class police{
     })
     }
     update(){
-        var playerIndex = "police/player" + this.index;
+        var playerIndex = "police" + this.index;
         database.ref(playerIndex).set({
         name:this.name,
         score:this.score,
