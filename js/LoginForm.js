@@ -26,7 +26,8 @@ class Loginform {
             cop.name=this.input.value();
             cop.update();
             cop.updateCount(policeCount);
-            gameState=1;
+            policeinstruction=new policeinstructions();
+            policeinstruction.display();
         })
         this.theif.mousePressed(()=>{
             this.input.hide();
@@ -35,7 +36,8 @@ class Loginform {
             robber.name=this.input.value();
             robber.update();
             robber.updateCount(theifCount);
-            gameState=2;
+            theifinstructon=new theifinstructons();
+            theifinstructon.display();
     });
     }
 }

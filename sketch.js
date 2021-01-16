@@ -1,3 +1,7 @@
+const Engine = Matter.Engine;
+const World = Matter.World;
+const Bodies = Matter.Bodies;
+const Body = Matter.Body;
 var canvas,firebase;
 var gameState = 0;
 var theifCount,policeCount;
@@ -10,6 +14,9 @@ function preload(){
 }
 function setup() {
   canvas=createCanvas(windowWidth,windowHeight);
+  engine = Engine.create();
+	world = engine.world;
+  Engine.run(engine);
   database = firebase.database(); 
   Game=new game();
   Game.getState();
@@ -17,16 +24,7 @@ function setup() {
 }
 
 function draw() {
+  Engine.update(engine);
   background("lightblue");
-  if (gameState===1){
-    clear();
-    policeinstruction=new policeinstructions();
-    policeinstruction.display();
-  }
-  if(gameState===2){
-    clear();
-    theifinstructon=new theifinstructons();
-    theifinstructon.display();
-  }
   drawSprites();
 }
