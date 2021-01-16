@@ -23,21 +23,22 @@ class Loginform {
             this.input.hide();
             this.theif.hide();
             this.police.hide();
-            player.name=this.input.value();
-            player.type="police"
-            player.update();
-            player.updateCount(playerCount);
+            cop.name=this.input.value();
+            cop.update();
+            cop.updateCount(policeCount);
+            policeinstruction=new policeinstructions();
+            policeinstruction.display();
+
         })
         this.theif.mousePressed(()=>{
             this.input.hide();
             this.theif.hide();
             this.police.hide();
-            this.logout.position(windowWidth-80,windowHeight-50)
-            this.logout.show();
-            player.name=this.input.value();
-            player.type="theif"
-            player.update();
-            player.updateCount(playerCount);
-        })
+            robber.name=this.input.value();
+            robber.update();
+            robber.updateCount(theifCount);
+            theifinstructon= new theifinstructons();
+            theifinstructon.display();
+    });
     }
 }

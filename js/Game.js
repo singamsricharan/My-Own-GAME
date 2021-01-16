@@ -15,20 +15,23 @@ update(state){
 }
 async start(){
     if(gameState === 0){
-      player = new Player();
-      var playerCountRef = await database.ref('playerCount').once("value");
-      if(playerCountRef.exists()){
-        playerCount = playerCountRef.val();
-        player.getCount();
-      }
-      if(player.type==="police"){
-        police=new policeinstructions
-      }
-      form =new Loginform()
+      form =new Loginform();
       form.display();
+      cop = new police();
+      var copCountRef = await database.ref('policeCount').once("value");
+      if(copCountRef.exists()){
+          policeCount = copCountRef.val();
+          cop.getpoliceCount();
+      }
+      robber = new theif();
+      var robberCountRef = await database.ref('theifCount').once("value");
+      if(robberCountRef.exists()){
+          theifCount = robberCountRef.val();
+          robber.gettheifCount();
+      }
     }
-    if(gameState===1){
-
-    }
+}
+play(){
+  
 }
 }

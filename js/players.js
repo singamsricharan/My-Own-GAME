@@ -7,12 +7,6 @@ class Player{
         this.name = null;
         this.type=null;
     }
-    getCount(){
-        var playerCountRef = database.ref('playerCount');
-        playerCountRef.on("value",(data)=>{
-        playerCount = data.val();
-    })
-    }
     update(){
         var playerIndex = "players/player" + this.index;
         database.ref(playerIndex).set({
@@ -23,11 +17,7 @@ class Player{
         type:this.type,
     });
     }
-    updateCount(count){
-        database.ref('/').update({
-            playerCount: count
-          });
-    }
+    
 }
 class theif{
     constructor(x,y){
@@ -37,14 +27,25 @@ class theif{
         this.cash=0;
         this.name = null;
     }
+    gettheifCount(){
+        var robberCountRef = database.ref('theifCount');
+        robberCountRef.on("value",(data)=>{
+        theifCount = data.val();
+    })
+    }
     update(){
-        var playerIndex = "players/player" + this.index;
+        var playerIndex = "theif/player" + this.index;
         database.ref(playerIndex).set({
         name:this.name,
         score:this.score,
         coins:this.coins,
         cash:this.cash,
     });
+    }
+    updateCount(count){
+        database.ref('/').update({
+            theifCount: count
+          });
     }
 }
 class police{
@@ -55,13 +56,24 @@ class police{
         this.cash=0;
         this.name = null;
     }
+    getpoliceCount(){
+        var copCountRef = database.ref('policeCount');
+        copCountRef.on("value",(data)=>{
+        policeCount = data.val();
+    })
+    }
     update(){
-        var playerIndex = "players/player" + this.index;
+        var playerIndex = "police/player" + this.index;
         database.ref(playerIndex).set({
         name:this.name,
         score:this.score,
         coins:this.coins,
         cash:this.cash,
     });
+    }
+    updateCount(count){
+        database.ref('/').update({
+            policeCount: count
+          });
     }
 }

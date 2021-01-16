@@ -1,9 +1,8 @@
 var canvas,firebase;
 var gameState = 0;
-var playerCount;
-var allPlayers;
+var theifCount,policeCount;
 var Game,form;
-var theif,police,player;
+var robber,cop,player,theifinstructon,policeinstruction;
 var policestation,aftercought;
 function preload(){
   policestation=loadImage("images/policestation.png");
