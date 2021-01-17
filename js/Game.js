@@ -31,7 +31,12 @@ async start(){
       }
     }
 }
-play(){
-  
-}
+    instructionsfortheif(){
+        form.hide();
+        theifinstructon=new theifinstructons();
+        theifinstructon.display();
+    }
+    instructionsforpolice(){
+        form.hide();
+    }
 }
