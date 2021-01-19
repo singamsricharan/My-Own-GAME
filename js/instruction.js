@@ -4,7 +4,6 @@ class theifinstructons{
         this.play=createButton('PLAY')
     }
     display(){
-        Loginform.hide();
         this.greeting.html("Hello " + robber.name)
         this.greeting.position(windowWidth/2,windowHeight/7);
         textSize(windowHeight/6)
@@ -25,7 +24,6 @@ class policeinstructions{
         this.play=createButton('PLAY')
     }
     display(){
-        Loginform.hide();
         this.greeting.html("Hello " + cop.name)
         this.greeting.position(windowWidth/2,windowHeight/5);
         text("1. Move anywhere using: arrow keys or  w, a, s, d.",windowWidth/2,windowHeight/2) 
