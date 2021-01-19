@@ -23,18 +23,24 @@ class Loginform {
             this.theif.hide();
             this.police.hide();
             cop.name=this.input.value();
+            policeCount=+1;
+            cop.index=policeCount;
             cop.update();
             cop.updateCount(policeCount);
-            
+            policeinstruction=new policeinstructions();
+            policeinstruction.display();
         })
         this.theif.mousePressed(()=>{
             this.input.hide();
             this.theif.hide();
             this.police.hide();
             robber.name=this.input.value();
+            theifCount+=1;
+            robber.index= theifCount;
             robber.update();
             robber.updateCount(theifCount);
-            Game.instructonsfortheif();
+            theifinstructon=new theifinstructons();
+            theifinstructon.display();
     });
     }
 }

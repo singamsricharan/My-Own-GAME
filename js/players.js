@@ -13,12 +13,13 @@ class theif{
     })
     }
     update(){
-        var playerIndex = "robbers/robber" + this.index;
-        database.ref(playerIndex).set({
+        var theifIndex = "robbers/robber" + this.index;
+        database.ref(theifIndex).set({
         name:this.name,
         score:this.score,
         coins:this.coins,
         cash:this.cash,
+        
     });
     }
     updateCount(count){
@@ -29,7 +30,7 @@ class theif{
     static gettheifInfo() {
         var theifInfoRef = database.ref('robbers');
         theifInfoRef.on("value", (data) => {
-            allPlayers = data.val();
+            alltheifs = data.val();
         })
     }
 }
@@ -48,8 +49,8 @@ class police{
     })
     }
     update(){
-        var playerIndex = "cops/cop" + this.index;
-        database.ref(playerIndex).set({
+        var policeIndex = "cops/cop" + this.index;
+        database.ref(policeIndex).set({
         name:this.name,
         score:this.score,
         coins:this.coins,
@@ -64,7 +65,7 @@ class police{
     static getpoliceInfo() {
         var policeInfoRef = database.ref('cops');
         policeInfoRef.on("value", (data) => {
-            allPlayers = data.val();
+            allpolice = data.val();
         })
     }
 }

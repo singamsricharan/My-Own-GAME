@@ -30,13 +30,8 @@ async start(){
           robber.gettheifCount();
       }
     }
+    // player1=createSprite(0,0);
+    // player2=createSprite(0,0);
+    // players[player1,player2]
 }
-    instructionsfortheif(){
-        form.hide();
-        theifinstructon=new theifinstructons();
-        theifinstructon.display();
-    }
-    instructionsforpolice(){
-        form.hide();
-    }
-}
+} 

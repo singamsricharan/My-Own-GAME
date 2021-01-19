@@ -6,8 +6,11 @@ var canvas,firebase;
 var gameState = 0;
 var theifCount,policeCount;
 var Game,form;
-var robber,cop,player,theifinstructon,policeinstruction;
+var allpolice,alltheifs;
+var robber,cop,theifinstructon,policeinstruction;
 var policestation,aftercought;
+var player1,player2;
+var players;
 function preload(){
   policestation=loadImage("images/policestation.png");
   aftercought=loadImage("images/policestation.png");
@@ -26,5 +29,4 @@ function setup() {
 function draw() {
   Engine.update(engine);
   background("lightblue");
-  drawSprites();
 }
